@@ -26,5 +26,10 @@ public class Program {
         list = sellerDao.findAll();
         list.forEach(System.out::println);
 
+        System.out.println("\n=== TEST 4: seller insert ===");
+        Seller newSeller = new Seller(null, "Gre", "greg@email", new Date(), 4000.00, department);
+        sellerDao.insert(newSeller);
+        System.out.println("Inserted! New id: " + newSeller.getId());
+
     }
 }
